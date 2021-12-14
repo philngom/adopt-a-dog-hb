@@ -6,6 +6,7 @@ const dogListContainer = document.getElementById('dog-list-container');
 window.addEventListener('load', async() => {
     const dogs = await getDogs();
     for (let dog of dogs) {
+        console.log(dog);
         let dogEl = renderDogCard(dog);
         dogListContainer.append(dogEl);
     }
